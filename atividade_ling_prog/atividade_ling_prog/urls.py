@@ -20,4 +20,6 @@ from viniapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include('viniapp.urls')),
+    path(r'felipe/', include('felipeapp.urls'))
+
 ]
