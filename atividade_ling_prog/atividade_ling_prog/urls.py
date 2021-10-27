@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from sofiaapp import views as sofiaapp_views
 
 urlpatterns = [
+    path(r'sofia/', include('sofiaapp.urls')),
     path('admin/', admin.site.urls),
 ]
