@@ -19,5 +19,5 @@ from django.urls.conf import include
 from felipeapp import views as felipeapp_views 
 
 urlpatterns = [
-    path(r'teste/', include('felipeapp.urls'))
+    path(r'felipe/', include('felipeapp.urls'))
 ]
