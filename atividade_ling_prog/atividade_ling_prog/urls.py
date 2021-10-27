@@ -20,7 +20,7 @@ from viniapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', include('viniapp.urls')),
-    path(r'felipe/', include('felipeapp.urls'))
+    path(r'vinicius/', include('viniapp.urls')),
+    path(r'felipe/', include('felipeapp.urls')),
     path(r'sofia/', include('sofiaapp.urls')),
 ]
