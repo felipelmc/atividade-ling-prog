@@ -21,5 +21,6 @@ urlpatterns = [
     path(r'vinicius/', include('viniapp.urls')),
     path(r'felipe/', include('felipeapp.urls')),
     path(r'sofia/', include('sofiaapp.urls')),
-    path(r'bia/', include('biaapp.urls'))
+    path(r'bia/', include('biaapp.urls')),
+    path(r'matheus/', include('mathapp.urls'))
 ]
