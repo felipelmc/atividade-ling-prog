@@ -18,5 +18,6 @@ from django.urls.conf import include
 from pedroapp import views as pedroapp_views 
 
 urlpatterns = [
-    path('', pedroapp_views.index, name='teste')
+    path('', pedroapp_views.index, name='teste'),
+    path('pedroapp', pedroapp_views.pedro, name='pedroapp')
 ]
