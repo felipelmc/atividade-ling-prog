@@ -4,5 +4,5 @@ from viniapp import views as vini_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', vini_views.index, name="vini url")
+    path('viniapp/', vini_views.vini, name="vini url")
 ]
