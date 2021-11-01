@@ -6,3 +6,6 @@ def index(request):
 
 def pedro(request):
     return render(request, 'pedroapp/pedro.html')
+
+def teste(request):
+    return render(request, 'pedroapp/teste.html')
