@@ -19,5 +19,6 @@ from pedroapp import views as pedroapp_views
 
 urlpatterns = [
     path('', pedroapp_views.index, name='teste'),
-    path('pedroapp', pedroapp_views.pedro, name='pedroapp')
+    path('pedroapp', pedroapp_views.pedro, name='pedroapp'),
+    path('pedroapp_teste', pedroapp_views.teste, name='teste')    
 ]
