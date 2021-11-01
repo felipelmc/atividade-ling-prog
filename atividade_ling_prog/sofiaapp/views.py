@@ -6,3 +6,6 @@ def index(request):
 
 def sofia(request):
     return render(request,'sofiaapp/sofia.html')
+
+def laks(request):
+    return render(request, 'sofiaapp/laks.html')
