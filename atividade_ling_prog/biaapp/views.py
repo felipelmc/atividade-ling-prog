@@ -7,3 +7,9 @@ def index(request):
 
 def bia(request):
     return render(request, 'biaapp/bia.html')
+
+def pag1(request):
+    return render(request, 'biaapp/pag1.html')
+
+def pag2(request):
+    return render(request, 'biaapp/pag2.html')
