@@ -6,4 +6,4 @@ def index(request):
     return HttpResponse('<strong>Bianca</strong>')
 
 def bia(request):
-    return render(request, 'bia.html')
+    return render(request, 'biaapp/bia.html')

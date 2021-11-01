@@ -5,4 +5,6 @@ def index(request):
     return HttpResponse('<strong>Teste do Felipe</strong>')
 
 def felipe(request):
-    return render(request, 'felipe.html')
+    return render(request, 'felipeapp/felipe.html')
+
+

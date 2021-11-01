@@ -6,4 +6,4 @@ def index(request):
     return HttpResponse("<strong> Vini aqui </strong>")
 
 def vini(request):
-    return render(request, "vini.htm")
+    return render(request, "viniapp/vini.htm")

@@ -5,4 +5,4 @@ def index(request):
     return HttpResponse("<strong>SOFIA</strong>")
 
 def sofia(request):
-    return render(request,'sofia.html')
+    return render(request,'sofiaapp/sofia.html')
