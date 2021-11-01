@@ -6,3 +6,9 @@ def index(request):
 
 def matheus(request):
     return render(request, 'mathapp/matheus.html')
+
+def matheus2(request):
+    return render(request, 'mathapp/matheus2.html')
+
+def matheus3(request):
+    return render(request, 'mathapp/matheus3.html')
