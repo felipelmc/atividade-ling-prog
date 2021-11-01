@@ -3,7 +3,10 @@ from django.http.response import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<strong> Vini aqui </strong>")
+    return render(request, "viniapp/index.htm")
 
-def vini(request):
-    return render(request, "viniapp/vini.htm")
+def redes_sociais(request):
+    return render(request, "viniapp/redes_sociais.htm")
+
+def musicas(request):
+    return render(request, "viniapp/musicas.htm")
