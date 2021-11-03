@@ -4,7 +4,11 @@ from django.shortcuts import render
 def index(request):
     return HttpResponse('<strong>Teste do Felipe</strong>')
 
-def felipe(request):
-    return render(request, 'felipeapp/felipe.html')
+def pag1(request):
+    return render(request, 'felipeapp/redes-sociais.html')
 
+def pag2(request):
+    return render(request, 'felipeapp/musicas.html')
 
+def pag3(request):
+    return render(request, 'felipeapp/faculdade.html')
