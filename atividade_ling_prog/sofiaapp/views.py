@@ -9,3 +9,6 @@ def sofia(request):
 
 def laks(request):
     return render(request, 'sofiaapp/laks.html')
+  
+def vitz(request):
+    return render(request, 'sofiaapp/vitz.html')
