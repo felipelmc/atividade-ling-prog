@@ -39,8 +39,14 @@ def redireciona(request):
     return HttpResponseRedirect(url_redirecionamento) 
 
 def special_dtl(request):
+    lista_de_cursos = ['ciência de dados', 'matemática aplicada']
+    lista_de_signos = ['Áries', 'Touro', 'Gêmeos', 'Câncer', 'Leão', 'Virgem', 'Libra', 'Scorpio',
+                       'Sagitário', 'Capricórnio', 'Aquário', 'Peixes']
+    
     context = {
         'nome':'Amiguinho',
-        'nome_familia':'Lamarca'
+        'nome_familia':'Lamarca',
+        'cursos': lista_de_cursos,
+        'signos': lista_de_signos
     }
     return render(request, 'felipeapp/felipeapp-dtl.html', context)
