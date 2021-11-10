@@ -1,42 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title> Python Web </title>
-</head>
+{% extends 'felipeapp/template1.html' %} 
+{% load static %}
 
-<body>
+{% block cabecalho %}
 
-<h1> EMAp </h1>
-<p> O {{nome}} {{nome_familia}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
-<p> O {{nome|add:nome_familia}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
-<p> O {{nome|add:' '|add:nome_familia}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
-<p> O tamanho do nome do aluno é {{nome|add:' '|add:nome_familia|length}}. </p>
+    <title> DTL </title>
 
-<p> O curso de {{cursos.0}}  é incrível.</p>
-<p> O curso de {{cursos.1|title}}  é incrível.</p>
+{% endblock %}
 
+{% block estilo %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'felipeapp/estilos.css' %}">
 
-<h1>Tags</h1>
-{% if nome|add:' '|add:nome_familia|length >= 20 %}
-    <p> Que nome enorme! </p>
-{% else %}
-    <p> Que nome pequenino! </p>
-{% endif %}
+{% endblock %}
 
-<ul>
-    {% for signo in signos %}
-        <li> {{signo}} </li>
-    {% endfor %}
-</ul>
+{% block conteudo %}
+
+    <h1> EMAp </h1>
+    <p> O {{nome}} {{nome_familia}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
+    <p> O {{nome|add:nome_familia}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
+    <p> O {{nome|add:' '|add:nome_familia}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
+    <p> O tamanho do nome do aluno é {{nome|add:' '|add:nome_familia|length}}. </p>
+
+    <p> O curso de {{cursos.0}}  é incrível.</p>
+    <p> O curso de {{cursos.1|title}}  é incrível.</p>
 
 
-<p> O nome em caixa alta é {{nome|upper}} </p>
-<p> O nome em caixa baixa é {{nome|lower}} </p>
-<p> Os cursos são {{cursos|join:", "|upper}} </p>
+    <h1>Tags</h1>
+    {% if nome|add:' '|add:nome_familia|length >= 20 %}
+        <p> Que nome enorme! </p>
+    {% else %}
+        <p> Que nome pequenino! </p>
+    {% endif %}
 
-<p> Agora é {% now "SHORT_DATETIME_FORMAT" %} </p>
+    <ul>
+        {% for signo in signos %}
+            <li> {{signo}} </li>
+        {% endfor %}
+    </ul>
 
-{% include 'felipeapp/rodape.html' %}
 
-</body>
-</html>
+    <p> O nome em caixa alta é {{nome|upper}} </p>
+    <p> O nome em caixa baixa é {{nome|lower}} </p>
+    <p> Os cursos são {{cursos|join:", "|upper}} </p>
+
+    <p> Agora é {% now "SHORT_DATETIME_FORMAT" %} </p>
+
+{% endblock %}
+
+
