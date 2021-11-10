@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Python Web </title>
+</head>
+
+<body>
+    <h1> AIFOS </h1>
+    <p> O {{nome}} {{nome_familia}} gosta muito de {{comida|upper}}. Tanto que não cabe no peito. </p>
+
+    <p>{{nome}} comeria {{numero|random}} {{comida}}(s) hoje!</p>
+
+    <p>Isto é o nome {{nome}} como uma lista: {{nome|make_list}}</p>
+
+    <p>Agora é {% now 'SHORT_DATETIME_FORMAT' %}</p>
+
+    {% include 'sofiaapp/sofia_rodape.html' %}
+</body>
+</html>
