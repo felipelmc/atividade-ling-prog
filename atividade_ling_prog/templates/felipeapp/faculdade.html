@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8"/>
+{% extends 'felipeapp/template1.html' %} 
+{% load static %}
+
+    {% block cabecalho %}
         <title>Faculdade</title>
-    </head>
+    {% endblock %}
+
+    {% block estilo %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'felipeapp/estilos.css' %}">
+
+    {% endblock %}
+
+    {% block conteudo %}
 
     <body>
         <header>
-        <h2>Bem-vindo à página sobre faculdade!</h2>
+        <h1>Bem-vindo à página sobre faculdade!</h1>
         </header>
        <p>
         Estudo Ciências Sociais no CPDOC e Ciência de Dados na EMAp.
@@ -18,10 +26,9 @@
        </p>
 
     </br>
+
         <aside>
             <a href = "#">Aqui mesmo!</a>
         </aside>
-        </br>
-        <footer> Copyright &copy; 2021 by Felipe Lamarca. </footer> 
-    </body>
-</html>
+
+    {% endblock %}

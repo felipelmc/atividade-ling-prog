@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8"/>
-        <title>FelipeApp</title>
-    </head>
+{% extends 'felipeapp/template1.html' %} 
+{% load static %}
 
-    <body>
+    {% block cabecalho %}
+        <title>Redes Sociais</title>
+    {% endblock %}
+
+    {% block estilo %}
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'felipeapp/estilos.css' %}">
+
+    {% endblock %}
+
+    {% block conteudo %}
+
         <header>
-        <h2>Olá! Bem-vindo à aplicação do Felipe :)</h2>
+        <h1>Olá! Bem-vindo à aplicação do Felipe :)</h1>
         </header> 
         <nav>
             <a href="https://www.instagram.com/felipelmc/">Instagram</a>
@@ -16,11 +23,12 @@
             </br>
             <a href="https://www.linkedin.com/in/felipe-lamarca-893a541a1/" target="_blank">Linkedin</a>
         </nav>
-    </br>
+
+        </br>
+        
         <aside>
             <a href = "#">Aqui mesmo!</a>
         </aside>
-        </br>
-        <footer> {% include 'felipeapp/rodape.html' %} </footer> 
-    </body>
-</html>
+
+    {% endblock %}
+
