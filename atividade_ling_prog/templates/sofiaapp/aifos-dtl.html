@@ -1,0 +1,24 @@
+{% extends 'sofiaapp/sofia_template.html' %}
+{% load static %}
+
+
+{% block cabecalho %}
+    <title> Aifos </title>
+{% endblock %}
+
+{% block estilo %}
+    <link rel='stylesheet' type='text/css' href="{% static 'sofiaapp/sofia_estilo.css'%}">
+{% endblock %}
+
+{% block conteudo %}
+    <h1> AIFOS </h1>
+    <p> O {{nome}} {{nome_familia}} gosta muito de {{comida|upper}}. Tanto que não cabe no peito. </p>
+
+    <p>{{nome}} comeria {{numero|random}} {{comida}}(s) hoje!</p>
+
+    <p>Isto é o nome {{nome}} como uma lista: {{nome|make_list}}</p>
+
+    <p>Agora é {% now 'SHORT_DATETIME_FORMAT' %}</p>
+
+    
+{% endblock %}

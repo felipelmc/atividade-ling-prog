@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang= "pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="styles.css">
-		<link rel="shortcut icon" href="img/icon.jpeg"/>
-		<title>MAC - Receitas de Lasanha de Carne Moída</title>
+{% extends 'mathapp/mathapp-template.html'%}
+{% load static %}
+
+{% block cabecalho %}
+	<title>MAC - Receitas de Lasanha de Carne Moída</title>
+{% endblock %}
+
+{% block estilo %}
+	<link rel="stylesheet" type="text/css" href="{% static 'mathapp/estilos.css' %}">
+{% endblock %}
 	</head>
-	<img src="img/logo_do_site.jpeg" alt="Logo do Site 'Me Ajuda, Chef'">
 	
 	<body>
 		<div class="topnav">
@@ -45,7 +47,9 @@
 			  </div>
 			</div>
 			
-			<h2>Modo de Preparo:</h2>
+		{% block conteudo %}
+
+			<h1>Modo de Preparo:</h1>
 				<p class="fonte_2">
 					Primeiro faremos a massa, cozinhe-a segundo as orientações do fabricante, despeje em um refratário com água gelada para não grudar e reserve.<br>
 					Depois de ter botado a massa para descansar faremos o molho à bolonhesa: Para faze-lo refogue o alho, a cebola, a carne moida, o molho de tomate e deixe cozinhar por 3 minutos, depois disso reserve<br>
@@ -57,9 +61,12 @@
 					<br>
 					
 				</p>
-		
+		{% endblock %}
 			<h2>Tempo de Preparo:</h2>
 				<p class="fonte_2">1 hora</p>
 		</header>
+		
+		{% include 'mathapp/rodape.html' %}
+
 	</body>
 </html>

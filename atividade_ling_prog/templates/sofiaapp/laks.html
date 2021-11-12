@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">       
-    <head> 
-        <meta charset="UTF-8"/>
+{% extends 'sofiaapp/sofia_template.html' %}
+{% load static %}
+
+    
+{% block cabecalho %}
         <title>Laks</title>
-    </head>
-	
-    <body>
-        <header>
-            <h1>Bem vindos ao LAKS!</h1>
-        </header>
+{% endblock %}
 
-        <p>É apenas isso também!</p>
+{% block estilo %}
+    <link rel='stylesheet' type='text/css' href="{% static 'sofiaapp/sofia_estilo.css'%}">
+{% endblock %}
 
-        <nav>
-            <a href="https://www.instagram.com/sofialakschevitz/" target="_blank">Instagram</a>
-            <a href="https://github.com/sofialakschevitz" target="_blank">GitHub</a>
-        </nav>
+{% block conteudo %}
+    <header>
+        <h1>Bem vindos ao LAKS!</h1>
+    </header>
 
-        <aside>
-            <a href="#">Aqui mesmo</a>
-        </aside>
+    <p>É apenas isso também!</p>
 
-        <footer>Copyright &copy; 2021 by EMAp.</footer>
-    </body>
-</html>
+    <nav>
+        <a href="https://www.instagram.com/sofialakschevitz/" target="_blank">Instagram</a>
+        <a href="https://github.com/sofialakschevitz" target="_blank">GitHub</a>
+    </nav>
+
+    <aside>
+        <a href="#">Aqui mesmo</a>
+    </aside>
+
+
+{% endblock %}
+

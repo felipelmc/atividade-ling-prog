@@ -1,24 +1,34 @@
-<!DOCTYPE html>
-<html lang= "pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="style" href="styles.css">
-		<title>Ferias do Math_M.C.F.</title>
-	</head>
+{% extends 'mathapp/mathapp-template.html'%}
+{% load static %}
 
+{% block cabecalho %}
+	<title>Minhas Ferias</title>
+{% endblock %}
+
+{% block estilo %}
+	<link rel="stylesheet" type="text/css" href="{% static 'mathapp/estilos.css' %}">
+{% endblock %}
+	</head>
+	
 	<body>
 		<header>
-			<h1>Como foram minhas férias:</h1>
 			
-			Bom dia amiguinhos!
-			<br>
-			Hoje vou falar sobre as minhas MARAVILHOSAS ferias.
-			<br>
-			Normalmente nas minhas ferias eu acordava as 7:00 para caminhar no Maracanã junto com a minha mãe, 
-			depois de voltar e tomar um banho, lia a biblia e começava a estudar cálculo (pois infelizmente não consegui paaasaar :( ). 
-			<br>
-			Mas minhas férias não foram só essas 3 atividades, mesmo que eu as tenha feito elas diariamentes, tambem aproveitei elas: <br>
-		
+			{% block conteudo %}
+
+				<h1>Como foram minhas férias:</h1>
+				
+				<p>Bom dia {{pessoas}}!
+				<br>
+				Hoje vou falar sobre as minhas {{adjetivo}} ferias.
+				<br>
+				Normalmente nas minhas ferias eu acordava as 7:00 para caminhar no Maracanã junto com a minha mãe, 
+				depois de voltar e tomar um banho, lia a biblia e começava a estudar cálculo (pois infelizmente não consegui paaasaar :( ). 
+				<br>
+				Mas minhas férias não foram só essas 3 atividades, mesmo que eu as tenha feito elas diariamentes, tambem aproveitei elas: <br>
+				</p>
+			
+			{% block conteudo %}
+
 		<main>
 			<h3>Outras Atividades Prazerosas que fiz:</h3>
 		<table>
@@ -109,3 +119,8 @@
 			E esse foi o resultado, aproveite: <br>
 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/37Urpb2TzTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		{% include 'mathapp/rodape.html' %}
+
+	</body>
+</html>
