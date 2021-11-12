@@ -1,0 +1,52 @@
+{% extends 'mathapp/mathapp-template.html'%}
+{% load static %}
+
+{% block cabecalho %}
+	<title>DLT</title>
+{% endblock %}
+
+{% block estilo %}
+	<link rel="stylesheet" type="text/css" href="{% static 'mathapp/estilos.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+	<h1>Melhor grupo é o grupo 4</h1>
+	<p>Esse é o melhor time, pois é um time esforçado e trabalhador</p>
+	<br>
+	<p>Alguns exemplos do {{pessoa|join:' '|add:adjetivo|title}}:
+{% endblock %}
+
+{% block conteudo %}
+
+    <h1> EMAp </h1>
+    <p> O {{pessoa}} {adjetivo}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
+    <p> O {{pessoa|add:adjetivo}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
+    <p> O {{pessoa|add:' '|add:adjetivo}} gosta muito do Yuri e do Camacho. Tanto que não cabe no peito. </p>
+    <p> O tamanho do nome do aluno é {{pessoa|add:' '|add:adjetivo|length}}. </p>
+
+    <p> O curso de {{cursos.0}}  é incrível.</p>
+    <p> O curso de {{cursos.1|title}}  é incrível.</p>
+
+
+    <h1>Tags</h1>
+    {% if pessoa|add:' '|add:adjetivo|length >= 20 %}
+        <p> Que nome enorme! </p>
+    {% else %}
+        <p> Que nome pequenino! </p>
+    {% endif %}
+
+    <ul>
+        {% for signo in signos %}
+            <li> {{signo}} </li>
+        {% endfor %}
+    </ul>
+
+
+    <p> O nome em caixa alta é {{pessoa|upper}} </p>
+    <p> O nome em caixa baixa é {{pessoa|lower}} </p>
+    <p> Os cursos são {{cursos|join:", "|upper}} </p>
+
+    <p> Agora é {% now "SHORT_DATETIME_FORMAT" %} </p>
+
+{% endblock %}
+
