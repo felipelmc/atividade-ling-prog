@@ -1,27 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-br">       
-    <head> 
-        <meta charset="UTF-8"/>
-        <title>SofiaApp</title>
-    </head>
+{% extends 'sofiaapp/sofia_template.html' %}
+{% load static %}
+
+    
+{% block cabecalho %}
+    <title>SofiaApp</title>
+{% endblock %}
 	
-    <body>
-        <header>
-            <h1>Bem vindos ao App da Sofia!</h1>
-        </header>
+{% block estilo %}
+    <link rel='stylesheet' type='text/css' href="{% static 'sofiaapp/sofia_estilo.css'%}">
+{% endblock %}
 
-        <p>Pronto! É isso!</p>
+{% block conteudo %}
+    <header>
+        <h1>Bem vindos ao App da Sofia!</h1>
+    </header>
 
-        <nav>
-            <a href="https://www.google.com.br/" target="_blank">Google</a>
-            <a href="https://www.w3schools.com/TAGS/default.ASP" target="_blank">W3C</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN</a>
-        </nav>
+    <p>Pronto! É isso!</p>
 
-        <aside>
-            <a href="#">Aqui mesmo</a>
-        </aside>
+    <nav>
+        <a href="https://www.google.com.br/" target="_blank">Google</a>
+        <a href="https://www.w3schools.com/TAGS/default.ASP" target="_blank">W3C</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN</a>
+    </nav>
 
-        <footer>Copyright &copy; 2021 by EMAp.</footer>
-    </body>
-</html>
+    <aside>
+        <a href="#">Aqui mesmo</a>
+    </aside>
+
+
+{% endblock %}
+

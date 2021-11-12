@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block cabecalho %}
+        <title> Python Web </title>
+    {% endblock %}
+
+    {% block estilo %}{% endblock %}
+</head>
+
+<body>
+    {% block conteudo %}
+        <p> Conteúdo padrão </p>
+    {% endblock %}
+
+    {% include 'sofiaapp/sofia_rodape.html' %}
+</body>
+
+</html>
