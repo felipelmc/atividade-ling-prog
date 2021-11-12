@@ -1,4 +1,4 @@
-from django.http.response import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http.response import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, Http404
 from django.shortcuts import render
 from django.urls import reverse 
 
@@ -22,7 +22,8 @@ def view_dinamica_int(request, param):
     elif param == 3:
         return HttpResponse('<strong>Parâmetro 3</strong>')
     else:
-        return HttpResponseNotFound("Página não existe!")
+        raise Http404()
+        # return HttpResponseNotFound("Página não existe!")
     
 def view_dinamica_str(request, param):
     if param == 'redes-sociais':
@@ -32,7 +33,8 @@ def view_dinamica_str(request, param):
     elif param == 'faculdade':
         return render(request, 'felipeapp/faculdade.html')
     else:
-        return HttpResponseNotFound("Página não existe!")
+        raise Http404()
+        # return HttpResponseNotFound("Página não existe!")
     
 def redireciona(request):
     url_redirecionamento = reverse('dinamica-str', args=['redes-sociais'])
