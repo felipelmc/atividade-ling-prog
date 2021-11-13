@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, Http404
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -29,13 +29,14 @@ def view_dinamica_int(request, param):
     elif param == 2:
         return HttpResponse('<strong>Paraâmetro 2</strong>')
     else:
-        return HttpResponseNotFound('Página não Encontrada')
+        raise Http404()
+        #return HttpResponseNotFound('Essa página não existe')
 
 def view_dinamica_str(request, param):
     if param == 'leao':
         return HttpResponse('<strong>Você se acha</strong>')
     else:
-        return HttpResponseNotFound('Página não Encontrada')
+        raise Http404()
 
 
 def special_dtl(request):
